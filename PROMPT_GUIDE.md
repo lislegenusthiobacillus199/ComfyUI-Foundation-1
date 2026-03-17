@@ -4,220 +4,144 @@
 
 ## Instrument Families
 
-```
 Synth, Keys, Bass, Bowed Strings, Mallet, Wind, Guitar, Brass, Vocal, Plucked Strings
-```
 
 ---
 
 ## Sub-Family Tags
 
 ### Synth
-```
 Synth Lead, Synth Bass, FM Synth, Wavetable Synth, Wavetable Bass, Supersaw, Reese Bass, Pad, Atmosphere, Texture, Pluck, Bell, Chiptune
-```
 
 ### Keys
-```
 Grand Piano, Digital Piano, Rhodes Piano, Digital Organ, Church Organ, Hammond Organ, Celesta
-```
 
 ### Bass
-```
 Synth Bass, Electric Bass, Sub Bass, Reese Bass, FM Bass, Wavetable Bass
-```
 
 ### Bowed Strings
-```
 Violin, Cello, Fiddle, Digital Strings
-```
 
 ### Mallet
-```
 Marimba, Vibraphone, Glockenspiel, Kalimba
-```
 
 ### Wind
-```
 Flute, Piccolo, Pan Flute, Ocarina, Clarinet, Oboe
-```
 
 ### Guitar
-```
 Acoustic Guitar
-```
 
 ### Brass
-```
 Trumpet, French Horn, Tuba
-```
 
 ### Vocal
-```
 Choir, Formant Vocal, Synthetic Vox
-```
 
 ### Plucked Strings
-```
 Harp, Kalimba
-```
 
 ---
 
 ## Timbre Tags
 
 ### Warmth & Brightness
-```
 Warm, Bright, Dark, Cold, Silky, Smooth, Soft, Shiny, Sparkly
-```
 
 ### Width & Space
-```
 Wide, Narrow, Near, Far, Intimate, Spacey, Ambient, Airy
-```
 
 ### Density & Texture
-```
 Thick, Thin, Full, Tight, Rich, Fat, Deep, Sub, Small
-```
 
 ### Character & Color
-```
 Clean, Gritty, Dirty, Crisp, Punchy, Round, Sharp, Focused, Present
-```
 
 ### Tonal Quality
-```
 Analog, Digital, Retro, Vintage, Classic, Modern
-```
 
 ### Spectral Character
-```
 Metallic, Glassy, Buzzy, Noisy, Dreamy, Ethereal
-```
 
 ### Waveform & Synthesis
-```
 Saw, Square, Pulse Wave, 303, Supersaw, FM, Wavetable
-```
 
 ### Distortion & Drive
-```
 Overdriven, Bitcrushed, Distorted
-```
 
 ### Frequency Range
-```
 Sub, Sub Bass, Low, Mids, Upper Mids, High, High Saw, Bass
-```
 
 ### Special Character
-```
 Acid, Growl, Breathy, Nasal, Formant, Synthetic, Chiptune, 303, Dubstep
-```
 
 ### Other
-```
 Epic, Catchy, Complex, Simple, Alternating, Rolling, Plucked, Sustained
-```
 
 ---
 
 ## FX Tags
 
 ### Reverb
-```
 Low Reverb, Medium Reverb, High Reverb, Plate Reverb
-```
 
 ### Delay
-```
 Low Delay, Medium Delay, High Delay, Ping Pong Delay, Stereo Delay, Cross Delay, Mono Delay
-```
 
 ### Distortion
-```
 Low Distortion, Medium Distortion, High Distortion, Overdriven
-```
 
 ### Modulation
-```
 Phaser, Low Phaser, Medium Phaser, High Phaser
-```
 
 ### Bitcrushing
-```
 Bitcrush, High Bitcrush, Bitcrushed
-```
 
 ### Wet/Dry
-```
 Wet, Dry
-```
 
 ---
 
 ## Notation & Structure Tags
 
 ### Musical Behavior
-```
 Melody, Bassline, Arp, Chord Progression, Top Melody, Triplets, Rolling, Plucked, Sustained, Strummed
-```
 
 ### Phrase Direction
-```
 Rising, Falling, Ascending, Descending
-```
 
 ### Complexity
-```
 Simple, Complex, Minimal, Layered
-```
 
 ### Speed
-```
 Slow, Fast, Slow Speed, Fast Speed
-```
 
 ### Character
-```
 Epic, Catchy, Atmospheric, Texture, Atmosphere
-```
 
 ### Special
-```
 Pitch Bend, Alternating, Complex Melody, Complex Arp Melody
-```
 
 ---
 
 ## BPM Options
 
-```
 100 BPM, 110 BPM, 120 BPM, 128 BPM, 130 BPM, 140 BPM, 150 BPM
-```
 
 ---
 
 ## Bar Options
 
-```
 4 Bars, 8 Bars
-```
 
 ---
 
 ## Musical Keys
 
 ### Major
-```
 C major, C# major, D major, Eb major, E major, F major, F# major, G major, Ab major, A major, Bb major, B major
-```
 
 ### Minor
-```
 C minor, C# minor, D minor, D# minor, E minor, F minor, F# minor, G minor, G# minor, A minor, Bb minor, B minor
-```
 
 ---
 
@@ -231,17 +155,17 @@ C minor, C# minor, D minor, D# minor, E minor, F minor, F# minor, G minor, G# mi
 
 3. `Reese Bass, Wide, Gritty, Rich, Rolling, Low Distortion, 8 Bars, 140 BPM, F minor`
 
-4. `Synth Bass, Wavetable Bass, Analog, Warm, Punchy, Medium Reverb, 8 Bars, 130 BPM, C minor`
+4. `Synth Bass, Analog, Warm, Punchy, Round, Medium Reverb, 8 Bars, 130 BPM, A minor`
 
-5. `FM Bass, Digital, Bright, Sharp, Pitch Bend, Medium Delay, 4 Bars, 150 BPM, G# minor`
+5. `Synth Bass, FM, Digital, Bright, Sharp, High Delay, 8 Bars, 140 BPM, G# minor`
 
-6. `Sub Bass, Bass, Gritty, Small, Square, Dark, Thick, Clean, Simple, Bassline, Epic, Choppy, Melody, 4 Bars, 150 BPM, G# minor`
+6. `Electric Bass, Warm, Deep, Tight, Clean, Low Reverb, Bassline, 8 Bars, 110 BPM, C major`
 
-7. `Bass, FM Bass, Medium Delay, Medium Reverb, Low Distortion, Phaser, Sub Bass, Upper Mids, Acid, Gritty, Wide, Dubstep, Thick, Silky, Warm, Rich, Overdriven, Crisp, Deep, Clean, Pitch Bend, 303, 8 Bars, 140 BPM, E minor`
+7. `Wavetable Bass, Gritty, Fat, Overdriven, Sub, Upper Mids, 8 Bars, 140 BPM, E minor`
 
-8. `Wavetable Bass, Sub, Low, Fat, Warm, Clean, Bassline, 8 Bars, 100 BPM, A minor`
+8. `FM Bass, 303, Acid, Gritty, High Phaser, Pitch Bend, 8 Bars, 140 BPM, F minor`
 
-9. `Electric Bass, Punchy, Tight, Round, Present, Low Reverb, Rolling, 8 Bars, 110 BPM, D major`
+9. `Sub Bass, Deep, Warm, Soft, Clean, Minimal, 8 Bars, 100 BPM, D major`
 
 10. `Synth Bass, FM, 303, Acid, Gritty, Upper Mids, High Phaser, High Reverb, Pitch Bend, 8 Bars, 140 BPM, F minor`
 
@@ -265,7 +189,7 @@ C minor, C# minor, D minor, D# minor, E minor, F minor, F# minor, G minor, G# mi
 
 19. `Pad, Soft, Smooth, Warm, Wide, High Reverb, Sustained, Chord Progression, 8 Bars, 100 BPM, F major`
 
-20. `Pluck, Bell, Crisp, Bright, Present, Medium Delay, Arp, 8 Bars, 128 BPM, D minor`
+20. `Synth Lead, Gritty, Buzzy, Overdriven, Punchy, Low Distortion, Complex, 8 Bars, 140 BPM, E minor`
 
 ### Keys & Piano (21-28)
 
