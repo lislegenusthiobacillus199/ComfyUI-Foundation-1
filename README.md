@@ -91,10 +91,21 @@ https://github.com/user-attachments/assets/6c00c56d-ea46-4feb-9bf8-876ecb2487b2
 cd ComfyUI/custom_nodes
 git clone https://github.com/saganaki22/ComfyUI-Foundation-1.git
 cd ComfyUI-Foundation-1
-pip install -r requirements.txt
+python install.py
 ```
 
-> **Note:** Dependencies are auto-installed at startup. See the [Dependency Details](#dependency-details) section below for what gets installed and why.
+> **Note:** The `install.py` script handles all dependency installation. See the [Dependency Details](#dependency-details) section below for what gets installed and why.
+
+### ComfyUI Manager "Install" Button Not Working?
+
+If the Manager install button still does nothing after the fixes in v0.1.4, the nuclear option is:
+
+```bash
+cd ComfyUI/custom_nodes
+git clone https://github.com/Saganaki22/ComfyUI-Foundation-1.git
+cd ComfyUI-Foundation-1
+python install.py
+```
 
 ---
 
