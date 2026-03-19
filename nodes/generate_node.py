@@ -18,6 +18,7 @@ import importlib.util
 import logging
 import sys
 from pathlib import Path
+from types import ModuleType
 from typing import Any, Dict, Optional, Tuple
 
 import torch
@@ -55,7 +56,7 @@ _real_k_sampling: Optional[object] = None   # cached after first load
 _external_injected: bool = False             # injected once per session
 
 
-def _load_file_as_module(name: str, path: Path) -> Optional[object]:
+def _load_file_as_module(name: str, path: Path) -> Optional[ModuleType]:
     """Load a single .py file as a module using importlib (no __init__ triggered)."""
     if not path.is_file():
         return None
@@ -420,12 +421,24 @@ class Foundation1Generate:
         # ── k_diffusion shim ───────────────────────────────────────────────
         # 1. Inject external.py (VDenoiser) into k_diffusion.external
         # 2. Swap ComfyUI's patched sampling.py with the real k-diffusion one
+        #
+        # We patch sys.modules["k_diffusion.sampling"] directly rather than
+        # setting _K.sampling on the package object.  comfy.k_diffusion has no
+        # __init__.py (namespace package), so _K.sampling may not exist as an
+        # attribute at all until the submodule has been imported — patching
+        # sys.modules is the only reliable way to intercept the lookup that
+        # stable_audio_tools.inference.sampling performs when it does
+        # `import k_diffusion as K` and then calls `K.sampling.sample_*`.
         _inject_k_external()
 
+        _real_sampling = _load_real_k_sampling()
+        _prev_sys_sampling: Optional[ModuleType] = sys.modules.get("k_diffusion.sampling")  # type: ignore[assignment]
+
         import k_diffusion as _K
-        _comfy_sampling  = _K.sampling
-        _real_sampling   = _load_real_k_sampling()
+        _prev_attr_sampling = getattr(_K, "sampling", None)
+
         if _real_sampling is not None:
+            sys.modules["k_diffusion.sampling"] = _real_sampling  # type: ignore[assignment]
             _K.sampling = _real_sampling
         else:
             logger.warning(
@@ -458,9 +471,19 @@ class Foundation1Generate:
                 pbar.update_absolute(total_pbar_steps, total_pbar_steps)
 
         finally:
-            # Always restore ComfyUI's k_diffusion.sampling regardless of
-            # success, error, or user cancellation.
-            _K.sampling = _comfy_sampling
+            # Always restore ComfyUI's k_diffusion.sampling in both sys.modules
+            # and as a package attribute, regardless of success or cancellation.
+            if _prev_sys_sampling is not None:
+                sys.modules["k_diffusion.sampling"] = _prev_sys_sampling
+            else:
+                sys.modules.pop("k_diffusion.sampling", None)
+            if _prev_attr_sampling is not None:
+                _K.sampling = _prev_attr_sampling
+            else:
+                try:
+                    del _K.sampling
+                except AttributeError:
+                    pass
             if unload_after_generate:
                 offload_to_cpu()
             if torch.cuda.is_available():
